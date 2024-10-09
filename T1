@@ -1,0 +1,13 @@
+#include <iostream>
+void divx(int n,int x)
+{
+    for(int i=1;i<=n;i++)
+    {
+        std::cout<<x*i<<' ';
+    }
+}
+int main()
+{
+    divx(4,15);
+    return 0;
+}
