@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+int identice(int n)
+{
+    int nrcif=(int)log10(n)+1;
+    int imp=0,p=1;
+    while(nrcif--)
+    {
+        imp+=p*1;
+        p*=10;
+    }
+    return n%imp==0;
+}
+int main()
+{
+    std::cout<<identice(2222);
+    return 0;
+}
