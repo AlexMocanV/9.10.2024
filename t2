@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cmath>
+int factori(int n,int m)
+{
+    int i=2,ans=0;
+    while(n!=1)
+    {
+        int nr=0;
+        while(n%i==0)
+        {
+            n/=i;
+            nr++;
+        }
+        if((m%((int)pow(i,nr))==0)&&nr)
+        {
+            ans++;
+        }
+        i++;
+        if(i*i>n)
+        {
+            if(m%n==0)
+            {
+                ans++;
+            }
+            break;
+        }
+    }
+    return ans;
+}
+int main()
+{
+    std::cout<<factori(16500,10780);
+    return 0;
+}
